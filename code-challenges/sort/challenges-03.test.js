@@ -191,8 +191,10 @@ const sortMeetingsByDay = (arr) => {
     if(a.dayOfWeel < b.dayOfWeek){return -1;}
     return 0;
   });
-  let x = arr.shift();
-  arr.push(x);
+  while(arr[0].dayOfWeek === 'Friday'){
+    let x = arr.shift();
+    arr.push(x);
+  }
 
   return arr;
 };
@@ -208,7 +210,26 @@ You DO NOT need to use your solution to Challenge 9 in completing Challenge 10.
 ------------------------------------------------------------------------------------------------ */
 
 const sortSchedule = (arr) => {
-  // Solution code here...
+  arr.sort( (a,b) => {
+    if(a.dayOfWeek > b.dayOfWeek){return 1;}
+    if(a.dayOfWeel < b.dayOfWeek){return -1;}
+    if(a.dayOfWeek === b.dayOfWeek){
+      if(a.start > b.start){return 1;}
+      if(a.start < b.start){return -1;}
+      let timeDiffA = Number(a.end) - Number(a.start);
+      let timeDiffB = Number(b.end) - Number(b.start);
+      if(timeDiffA > timeDiffB){return 1;}
+      if(timeDiffA < timeDiffB){return -1;}
+    }
+    return 0;
+  });
+
+  while(arr[0].dayOfWeek === 'Friday'){
+    let x = arr.shift();
+    arr.push(x);
+  }
+
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -327,7 +348,7 @@ describe('Testing challenge 9', () => {
   });
 });
 
-xdescribe('Testing challenge 10', () => {
+describe('Testing challenge 10', () => {
   test('It should sort meetings by when they happen', () => {
     expect(sortSchedule(meetings)).toStrictEqual([
       new Meeting('Monday', '0900', '0945'),

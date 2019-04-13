@@ -168,7 +168,6 @@ const removeEvenValues = (arr) => {
       i = i - 1;
     }
   }
-
   return arr;
 };
 
@@ -188,7 +187,7 @@ removeLastCharacters('Gregor', 9) returns ''
 ------------------------------------------------------------------------------------------------ */
 
 const removeLastCharacters = (str, numberOfCharacters) => {
-  // Solution code here...
+  
 };
 
 
@@ -200,7 +199,12 @@ Write a function named totalSumCSV that, given a string of comma-separated value
 
 const totalSumCSV = (str) => {
   let total = 0;
-  // Solution code here...
+  let convertToArray = str.split(',');
+
+  convertToArray.forEach(val => {
+    let convertToNum = Number(val);
+    total = total + convertToNum;
+  });
   return total;
 };
 
@@ -309,7 +313,7 @@ xdescribe('Testing challenge 7', () => {
   });
 });
 
-xdescribe('Testing challenge 8', () => {
+describe('Testing challenge 8', () => {
   test('It should add up the numbers contained within the string', () => {
     expect(totalSumCSV('1,4,5,7,2')).toStrictEqual(19);
     expect(totalSumCSV('147')).toStrictEqual(147);

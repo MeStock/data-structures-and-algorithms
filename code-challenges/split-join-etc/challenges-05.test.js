@@ -218,7 +218,15 @@ For example, removeVowels('gregor') returns 'grgr'.
 ------------------------------------------------------------------------------------------------ */
 
 const removeVowels = (str) => {
-  // Solution code here...
+  let allVowels = /[aeiou]/gi;
+  let includedVowels = str.match(allVowels);
+  if(includedVowels){
+    for(let i = 0; i < includedVowels.length; i++){
+      str = str.split(includedVowels[i]);
+      str = str.join('');
+    }
+  }
+  return str;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -320,7 +328,7 @@ describe('Testing challenge 8', () => {
   });
 });
 
-xdescribe('Testing challenge 9', () => {
+describe('Testing challenge 9', () => {
   test('It should return the string without vowels', () => {
     expect(removeVowels('gregor')).toStrictEqual('grgr');
     expect(removeVowels('gregor').length).toStrictEqual(4);

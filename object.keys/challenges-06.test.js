@@ -122,13 +122,21 @@ const hasChildrenValues = (arr, character) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
-Write a function named hasChildrenEntries that is similar to your hasChildrenValues function from challenge 4, but uses the data's entries instead of its keys.
+Write a function named hasChildrenEntries that is similar to your hasChildrenValues function from challenge 4, but uses the data's entries instead of its values.
 
 The input and output of this function are the same as the input and output from challenge 4.
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenEntries = (arr, character) => {
-  // Solution code here...
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i].name === character){
+      if(Object.entries(arr[i].children).length !== 0){
+        return true;
+      }else{
+        return false;
+      }
+    }
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -211,7 +219,7 @@ describe('Testing challenge 4', () => {
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should return true for characters that have children', () => {
     expect(hasChildrenEntries(characters, 'Eddard')).toBeTruthy();
   });

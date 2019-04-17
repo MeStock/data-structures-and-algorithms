@@ -182,7 +182,20 @@ const snorlaxStats = {
 };
 
 const extractStats = (arr) => {
-  // Solution code here...
+  let result = [];
+  arr.map( statsObj => {
+    //extract name
+    let name = statsObj.stat.name;
+    //extract effort & baseStat = total
+    let effort = statsObj.effort;
+    let baseStat = statsObj.baseStat;
+    let total = effort + baseStat;
+    //create new obj
+    let newObj = {name, total};
+    //push into results
+    result.push(newObj);
+  });
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -265,7 +278,7 @@ describe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   test('It should return an array containing objects with name and total values', () => {
     expect(extractStats(snorlaxStats.stats)).toStrictEqual([
       { name: 'speed', total: 35, },

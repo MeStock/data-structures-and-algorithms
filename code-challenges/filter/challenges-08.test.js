@@ -105,7 +105,13 @@ For example, getStatName(snorlaxData.stats, 50) will return ['special-defense', 
 ------------------------------------------------------------------------------------------------ */
 
 const getStatName = (arr, minBaseStat) => {
-  // Solution code here...
+  let result = [];
+  arr.filter(statsObj => {
+    if(statsObj.baseStat > minBaseStat){
+      result.push(statsObj.stat.name);
+    } 
+  });
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -241,7 +247,7 @@ describe('Testing challenge 4', () => {
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should return the name of the stats that exceed that maximum', () => {
     expect(getStatName(snorlaxData.stats, 50)).toStrictEqual([ 'special-defense', 'special-attack' ]);
     expect(getStatName(snorlaxData.stats, 50).length).toStrictEqual(2);

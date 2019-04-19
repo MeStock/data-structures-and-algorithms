@@ -151,7 +151,6 @@ const characters = [
 
 const countNumberOfChildren = (arr) => {
   return arr.reduce((a,b) => {
-		console.log('a before if: ' + a);
 		if(b.children){
 			return a + b.children.length;
 		}else{
@@ -169,7 +168,13 @@ Hint: The accumulator should begin as { count: 0, sum: 0 }
 ------------------------------------------------------------------------------------------------ */
 
 const calculateAverage = (arr) => {
-  // Solution code here...
+	let count = 0;
+	let sum = arr.reduce((a,b) => {
+		count++;
+		return a + b;
+	}, 0);
+	let avg = sum/count;
+	return avg;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -285,7 +290,7 @@ describe('Testing challenge 4', () => {
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should return the average of the numbers in the array', () => {
     expect(calculateAverage([18, 290, 37, 4, 55, 16, 7, 85 ])).toStrictEqual(64);
   });

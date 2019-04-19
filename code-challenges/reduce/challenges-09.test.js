@@ -1,3 +1,4 @@
+/* eslint-disable no-trailing-spaces */
 /* eslint-disable indent */
 'use strict';
 
@@ -262,7 +263,22 @@ Write a function named extractChildren that, given the array of characters from 
 ------------------------------------------------------------------------------------------------ */
 
 const extractChildren = (arr) => {
-  // Solution code here...
+	let letterA = /[a]/gi;
+	let result = [];
+	
+	let filteredResults = arr.filter(char => {
+		if(char.name.match(letterA)) return true;
+	});
+
+	filteredResults.reduce((a,b) => {
+		if(b.children){
+			result.push(b.children);
+			return a;
+		}
+		return a;
+	}, []);
+	result = result.join().split(',');
+	return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -318,7 +334,7 @@ describe('Testing challenge 7', () => {
   });
 });
 
-xdescribe('Testing challenge 8', () => {
+describe('Testing challenge 8', () => {
   test('It should return an array containing the names of the children', () => {
     expect(extractChildren(characters)).toStrictEqual([ 'Robb', 'Sansa', 'Arya', 'Bran', 'Rickon', 'Drogon', 'Rhaegal', 'Viserion', 'Margaery', 'Loras' ]);
     expect(extractChildren(characters).length).toStrictEqual(10);

@@ -11,7 +11,7 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 ------------------------------------------------------------------------------------------------ */
 
 const count = (target, input) => {
-  let numOfFives = input.map(arr => {
+  return input.map(arr => {
     return arr.reduce((a,b) => {
       if(b === target){
         a = a + 1;
@@ -19,8 +19,7 @@ const count = (target, input) => {
       }
       return a;
     }, 0);
-  });
-  return numOfFives.reduce((a, b) => a+b, 0);
+  }).reduce((a, b) => a+b, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -55,12 +54,11 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 
 const divisibleByFiveTwoToThePower = (input) => {
   return input.map(arr => {
-    let filteredResults = arr.filter(val => {
+    return arr.filter(val => {
       if(typeof val === 'number'){
         if(val % 5 === 0) return true;
       }
-    });
-    return filteredResults.map(multipleOfFive => {
+    }).map(multipleOfFive => {
       let result = 2 ** multipleOfFive;
       return result;
     });
@@ -144,7 +142,10 @@ Write a function named findShortest that, given the Star Wars data from Challeng
 ------------------------------------------------------------------------------------------------ */
 
 let findShortest = (data) => {
-  // Solution code here...
+	return data.reduce((a,b) => {
+    if(parseInt(a.height) < parseInt(b.height)) return a;
+    if(parseInt(a.height) > parseInt(b.height)) return a = b;
+  }).name;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -199,7 +200,7 @@ describe('Testing challenge 4', () => {
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should return the name of the shortest character', () => {
     expect(findShortest(starWarsData)).toStrictEqual('R2-D2');
   });

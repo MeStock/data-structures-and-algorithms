@@ -31,6 +31,14 @@ Note: if you ever need to validate an email using a regex in practice, the Inter
 ------------------------------------------------------------------------------------------------ */
 
 const validateEmail = (email) => {
+  let checkName = /(\w+@)/gi;
+	let checkMiddleName = /(\.\w+\.)/gi;
+	let checkDomain = /\b.?\w{3}$/gi;
+  if(checkName.test(email)){
+		if(email.match(checkMiddleName)) return false;
+    if(checkDomain.test(email)) return true;
+    return false;
+  }
   // Solution code here...
 };
 
@@ -56,7 +64,9 @@ Return either true or false.
 ------------------------------------------------------------------------------------------------ */
 
 const validatePhoneNumber = (phoneNumber) => {
-  // Solution code here...
+  let num = /\d{3,4}/g;
+  if(num.test(phoneNumber)) return true;
+  return false;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -95,7 +105,7 @@ describe('Testing challenge 1', () => {
   });
 });
 
-xdescribe('Testing challenge 2', () => {
+describe('Testing challenge 2', () => {
   test('It should match a basic email', () => {
     expect(validateEmail('joe@codefellows.com')).toBeTruthy();
   });

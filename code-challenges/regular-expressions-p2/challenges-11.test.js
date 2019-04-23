@@ -64,7 +64,7 @@ Return either true or false.
 ------------------------------------------------------------------------------------------------ */
 
 const validatePhoneNumber = (phoneNumber) => {
-  let acceptedNum = /(\(?\d{3}\)?\s?\-?\d{3}\-?\s?\d{4})/gi;
+  let acceptedNum = /(^(\d{3}|\(\d{3}\))\s?\-?\d{3}\-?\s?\d{4})$/;
   if(acceptedNum.test(phoneNumber)) return true;
   return false;
 };
@@ -135,7 +135,7 @@ describe('Testing challenge 2', () => {
   });
 });
 
-xdescribe('Testing challenge 3', () => {
+describe('Testing challenge 3', () => {
   test('It should match the acceptable phone number formats', () => {
     expect(validatePhoneNumber('(555) 555-5555')).toBeTruthy();
     expect(validatePhoneNumber('555 555-5555')).toBeTruthy();

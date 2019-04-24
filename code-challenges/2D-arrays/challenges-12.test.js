@@ -118,7 +118,14 @@ For example, the following input returns a product of 720: [[1,2], [3,4], [5,6]]
 ------------------------------------------------------------------------------------------------ */
 
 const calculateProduct = (numbers) => {
-  // Solution code here...
+  let products = numbers.map(arr => {
+    return arr.reduce((a,b) => {
+      return a * b;
+    }, 1);
+  });
+  return products.reduce((a,b) => {
+    return a * b;
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -243,7 +250,7 @@ describe('Testing challenge 4', () => {
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should multiply all the numbers together', () => {
     expect(calculateProduct([[1,2], [3,4], [5,6]])).toStrictEqual(720);
   });

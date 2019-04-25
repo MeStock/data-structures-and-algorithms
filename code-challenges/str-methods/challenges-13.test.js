@@ -40,7 +40,13 @@ For example, (123) 456-7890 returns 1234567890
 const standardizePhoneNumbers = (arr) => {
   return arr.map(str => {
     return str.split('').filter(eachChar => {
-      if(eachChar === '(' || eachChar === ')' || eachChar === '-' || eachChar === ' ') return false;
+      if(
+        eachChar === '(' ||
+        eachChar === ')' ||
+        eachChar === '-' ||
+        eachChar === ' ') {
+        return false;
+      }
       return true;
     }).join('');
   });
@@ -55,7 +61,10 @@ For example, 'abcdefg' returns 'bdf'
 ------------------------------------------------------------------------------------------------ */
 
 const onlyOddChars = (str) => {
-  // Solution code here...
+  return str.split('').filter((value, idx) => {
+    if(idx % 2) return true;
+    return false;
+  }).join('');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -184,7 +193,7 @@ describe('Testing challenge 3', () => {
   });
 });
 
-xdescribe('Testing challenge 4', () => {
+describe('Testing challenge 4', () => {
   test('It should only return the odd indexed characters from the string', () => {
     expect(onlyOddChars('0123456789')).toStrictEqual('13579');
     expect(onlyOddChars('abcd')).toStrictEqual('bd');

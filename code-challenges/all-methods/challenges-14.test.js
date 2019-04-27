@@ -9,7 +9,9 @@ For example, ['apple', 'banana', 'MacGyver'] returns ['Apple', 'Banana', 'MacGyv
 ------------------------------------------------------------------------------------------------ */
 
 const toTitleCase = (arr) => {
-  // Solution code here...
+  return arr.map(word => {
+    return word.split('')[0].toUpperCase() + word.slice(1,word.length);
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -155,7 +157,7 @@ Run your tests from the console: jest challenge-14.test.js
 
 ------------------------------------------------------------------------------------------------ */
 
-xdescribe('Testing challenge 1', () => {
+describe('Testing challenge 1', () => {
   test('It should convert each word to title case', () => {
     const words = ['apple', 'banana', 'MacGyver'];
     expect(toTitleCase(words)).toStrictEqual(['Apple','Banana','MacGyver']);

@@ -16,7 +16,7 @@ console.log(reverseArray([1,2,3,4,5]));
 function stretchGoal(arr){
   let result = [];
   let length = arr.length;
-  for(i = 0; i < length; i++){
+  for(let i = 0; i < length; i++){
     let lastElement = arr.pop();
     result.push(lastElement);
   }

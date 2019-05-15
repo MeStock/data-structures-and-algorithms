@@ -11,6 +11,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "eslint": "^5.16.0",
     "jest": "^24.1.0"
   }
 }

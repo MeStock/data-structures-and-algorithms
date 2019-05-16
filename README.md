@@ -45,5 +45,16 @@ This helped me see how to set up my for loop to accomodate the addition of a new
 ![whiteboard insert shift array2](/assets/array-shift2.jpg)
 ![whiteboard insert shift array3](/assets/array-shift3.jpg)
 
+# Array Binary Search
+The binary search function takes in a sorted array and key as parameters. It will search the sorted array for a value that matches the key and return the index at which is was found. If no match is found, it will return -1.
+
+## Challenge
+To make the search a little quicker I had to implement some logic to split the array in halfs at every search. Luckily the input array is sorted which is the only reason this was successful.
+
+## Approach & Efficiency
+I started with whiteboarding which helped visualize the steps needed to do the search. This helped me recognize that I would need to keep track of previous searches in order to stop my function when no match was found. To do this, I created a tempIdx that stored the previously checked idx. If the previously check idx equaled the curently check idx my function would stop. When the function stoped, if the key and value matched I would return that idx. If not, I would return -1. I spent 1hr doing the whiteboard, 30min implementing the code, and 3mins writing the tests.
+
+## Solution
+![whiteboard array binary search](/assets/array-binary-search.jpeg)
 
 

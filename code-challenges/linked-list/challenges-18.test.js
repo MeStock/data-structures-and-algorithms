@@ -30,7 +30,7 @@ class Node {
         next: null
       };
       this.tail = this.head;
-      return;
+      return this;
     }
 
     let current = this.tail;
@@ -41,31 +41,90 @@ class Node {
     };
 
     this.tail = current.next;
+    return this;
   }
 
   include(value){
     let current = this.head;
     while(current.next !== null){
       if(current.value === value){
-        return console.log('true');
+        return true;
       }
       current = current.next;
     }
-    if(current.value === value) return console.log('true');
-    return console.log('false');
+    if(current.value === value) return true;
+    return false;
   }
+
   print(){
-    // if(!this.head) throw 
+    if(!this.head) throw 'List is empty';
+    let current = this.head; 
+    let nodeValues = current.value;
+    while(current.next !== null){
+      current = current.next;
+      nodeValues += ` ${current.value}`;
+    }
+    return nodeValues;
   }
 }
 
-const test = new Node;
-test.insert('melissa');
-test.insert('kevin');
-test.insert('kiwi');
-test.insert('wallace');
-test.include('wallace');
-test.include('');
+const stockFamily = new Node;
+stockFamily.insert('melissa');
+stockFamily.insert('kevin');
+stockFamily.insert('kiwi');
+stockFamily.insert('wallace');
+stockFamily.include('wallace');
+stockFamily.include('');
+stockFamily.print();
 
 console.log(test);
+
+describe('Linked list', () => {
+  it('shound successfully build an empty linked list', () => {
+    expect(new Node()).toBeInstanceOf(Node);
+  });
+  it('can properly insert into the linked list', () => {
+    const test = new Node;
+    expect(test.insert('test')).toEqual(expect.objectContaining(test));
+  });
+  it('head should point to the first node in the list', () => {
+    const test = new Node;
+    test.insert('head');
+    test.insert('first node');
+    console.log(test.next);
+    expect(test.head.next.value).toBe('first node');
+  });
+  it('should properly insert multiple nodes into the list', () => {
+    const test = new Node;
+    test.insert('head');
+    test.insert('first node');
+    test.insert('second node');
+    test.insert('third node');
+    expect(test.head.next.next.next.value).toBe('third node');
+  });
+  it('should return true when it finds a searched value within the list', () => {
+    const test = new Node;
+    test.insert('head');
+    test.insert('first node');
+    test.insert('second node');
+    test.insert('third node');
+    expect(test.include('third node')).toBeTruthy();
+    expect(test.include('first node')).toBeTruthy();
+    expect(test.include('forth node')).toBeFalsy();
+  });
+  it('should return false when it does not find a searched value within the list', () => {
+    const test = new Node;
+    test.insert('head');
+    test.insert('first node');
+    expect(test.include('forth node')).toBeFalsy();
+  });
+  it('can print out a list of values within the lsit', () => {
+    const test = new Node;
+    test.insert('head');
+    test.insert('first node');
+    test.insert('second node');
+    test.insert('third node');
+    expect(test.print()).toEqual('head first node second node third node');
+  });
+});
 

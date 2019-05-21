@@ -57,4 +57,18 @@ I started with whiteboarding which helped visualize the steps needed to do the s
 ## Solution
 ![whiteboard array binary search](/assets/array-binary-search.jpeg)
 
+# Linked Lists
+Create methods that can traverse a linked list to append to nodes, insert new nodes, and print out the values of the collection of nodes.
+
+## Challenge
+Traversing a linked list can be difficult. 
+
+## Approach & Efficiency
+I spent 1hour whiteboarding this problem with the help of 4 other students. (Becky Peterson, Jesse Van Volkinburg, Bonnie Wang, Jag Singh). We talked about the edge cases for each method and worked out all the details. This has helped in the past and typially makes writting the actual code a lot more smooth. I ended up taking a different approach because the psuedo code had small errors. Broke the problem down into smaller pieces to help recognize how the information was being traversed.
+
+## Solution
+![whiteboard linked list](/assets/linkedlist1.jpeg)
+![whiteboard linked list](/assets/linkedlist2.jpeg)
+![whiteboard linked list](/assets/linkedlist3.jpeg)
+
 

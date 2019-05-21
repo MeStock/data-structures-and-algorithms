@@ -77,7 +77,7 @@ stockFamily.include('wallace');
 stockFamily.include('');
 stockFamily.print();
 
-console.log(test);
+console.log(stockFamily);
 
 describe('Linked list', () => {
   it('shound successfully build an empty linked list', () => {

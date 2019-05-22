@@ -57,7 +57,7 @@ I started with whiteboarding which helped visualize the steps needed to do the s
 ## Solution
 ![whiteboard array binary search](/assets/array-binary-search.jpeg)
 
-# Linked Lists
+# Linked Lists - insert before and after
 Create methods that can traverse a linked list to append to nodes, insert new nodes, and print out the values of the collection of nodes.
 
 ## Challenge
@@ -71,4 +71,14 @@ I spent 1hour whiteboarding this problem with the help of 4 other students. (Bec
 ![whiteboard linked list](/assets/linkedlist2.jpeg)
 ![whiteboard linked list](/assets/linkedlist3.jpeg)
 
+# Linked Lists - node k spots from end of list
+Create method a method that takes in parameter k, that returns the nodes value at k spots from the end of the linked list.
 
+## Challenge
+Finding the end of the node, and traversing to k spots before the end. Double linked lists have pointers in both directions, however, singly link lists can only move in one direction.
+
+## Approach & Efficiency
+My link lists have a length property. I used this to find the node that was k distance from the end. (ie: link list length - k). From here the function was straight forward, traverse through the list length - k times. At this point stop and return the current nodes value. Once this was working as expected I added conditionals at the begining of the method that restricted input types. For example: negative numbers and strings.
+
+## Solution
+![whiteboard linked list](/assets/nodeFromEnd.jpg)

@@ -82,3 +82,16 @@ My link lists have a length property. I used this to find the node that was k di
 
 ## Solution
 ![whiteboard linked list](/assets/nodeFromEnd.jpg)
+
+# Linked Lists - mergeList
+Create function that takes in two linked list as its parameters and returns the two lists ziped together. <br>
+* Ex: [1]->[2]->[3] & [A]->[B]->[C] returns [1]->[A]->[2]->[B]->[3]->[C]
+
+## Challenge
+Traversing through a linked lists and adjusting the pointers of each node while keeping BigO of space to O(1).
+
+## Approach & Efficiency
+I started with a lot of visual diagrams to see how the information was being moved around. Originally, I wanted to zip from the begining of each linked lists. With the help of my diagrams, I was able to recognize that zipping from the ends of the linked lists would keep the BigO of space to O(1). From there I was able to develop some psuedo code that worked for linked list of length 3. With more time, I will adjust this function to handle lists of any size now that a pattern has been accomplished.
+
+## Solution
+![whiteboard linked list](/assets/mergeList.jpg)

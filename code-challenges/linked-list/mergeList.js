@@ -7,39 +7,7 @@ Write a function called mergeLists which takes two linked lists as arguments. Zi
 
 */
 
-const LinkedList = require('./insert-include-print.js');
-
-// class LinkedList {
-//   constructor(){
-//     this.head = null;
-//     this.tail = null;
-//     this.length = null;
-//   }
-
-//   insert(value){
-//     if(!this.head){
-//       this.head = {
-//         value: value,
-//         next: null
-//       };
-//       this.tail = this.head;
-//       this.length = 1;
-//       return this;
-//     }
-
-//     let current = this.tail;
-
-//     current.next = {
-//       value: value,
-//       next: null,
-//     };
-
-//     this.tail = current.next;
-//     this.length++;
-//     return this;
-//   }
-
-// }
+// const LinkedList = require('./insert-include-print.js');
 
 function mergeList(LL1, LL2){
   if(typeof LL1 !== 'object' || typeof LL2 !== 'object') return 'Invalid input, please enter two linked list';
@@ -70,20 +38,20 @@ function mergeList(LL1, LL2){
   return head1;
 }
 
-const LL1 = new LinkedList;
-LL1.insert('1');
-LL1.insert('2');
-LL1.insert('3');
+// const LL1 = new LinkedList;
+// LL1.insert('1');
+// LL1.insert('2');
+// LL1.insert('3');
 
-const LL2 = new LinkedList;
-LL2.insert('A');
-LL2.insert('B');
-LL2.insert('C');
+// const LL2 = new LinkedList;
+// LL2.insert('A');
+// LL2.insert('B');
+// LL2.insert('C');
 
 
-const test = mergeList(LL1,LL2);
+// const test = mergeList(LL1,LL2);
 
-console.log(test);
+// console.log(test);
 
 
 module.exports = mergeList;

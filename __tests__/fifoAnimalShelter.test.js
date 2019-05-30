@@ -11,7 +11,7 @@ describe('Animal Shelter', () => {
       expect(test.catQ.front.value).toEqual('cat');
       expect(test.dogQ.front.value).toEqual('dog');
     });
-    it('should successfully enqueueu multiple items into a queue', () => {
+    it('should successfully enqueue multiple items into a queue', () => {
       const test = new AnimalShelter();
       test.enqueue('cat');
       test.enqueue('cat');

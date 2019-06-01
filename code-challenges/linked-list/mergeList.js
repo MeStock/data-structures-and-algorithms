@@ -7,37 +7,7 @@ Write a function called mergeLists which takes two linked lists as arguments. Zi
 
 */
 
-class LinkedList {
-  constructor(){
-    this.head = null;
-    this.tail = null;
-    this.length = null;
-  }
-
-  insert(value){
-    if(!this.head){
-      this.head = {
-        value: value,
-        next: null
-      };
-      this.tail = this.head;
-      this.length = 1;
-      return this;
-    }
-
-    let current = this.tail;
-
-    current.next = {
-      value: value,
-      next: null,
-    };
-
-    this.tail = current.next;
-    this.length++;
-    return this;
-  }
-
-}
+// const LinkedList = require('./insert-include-print.js');
 
 function mergeList(LL1, LL2){
   if(typeof LL1 !== 'object' || typeof LL2 !== 'object') return 'Invalid input, please enter two linked list';
@@ -83,24 +53,5 @@ function mergeList(LL1, LL2){
 
 // console.log(test);
 
-describe('mergeList', () => {
-  const LL1 = new LinkedList;
-  LL1.insert('1');
-  LL1.insert('2');
-  LL1.insert('3');
 
-  const LL2 = new LinkedList;
-  LL2.insert('A');
-  LL2.insert('B');
-  LL2.insert('C');
-  const test = mergeList(LL1,LL2);
-  it('should zip up two link list', () => {
-    expect(test.next.value).toEqual('A');
-    expect(test.next.next.value).toEqual('2');
-    expect(test.next.next.next.value).toEqual('B');
-  });
-  it('should throw an error if the input is invalide', () => {
-    expect(mergeList(1,LL1)).toEqual('Invalid input, please enter two linked list');
-  });
-});
-
+module.exports = mergeList;

@@ -95,3 +95,33 @@ I started with a lot of visual diagrams to see how the information was being mov
 
 ## Solution
 ![whiteboard linked list](/assets/mergeList.jpg)
+
+# Stacks and Queues
+A Stack is a data structure that consists of Nodes. Each Node references the next node in the stack, but it can not reference it's previous. It operates on the last in first out order. Similarly, a Queue is a data structure that consists of Nodes. Each node references the next in the queue, but it cannot reference its previous. However, a Queue operates on the first in first out order.
+
+## Challenge
+Create a class called with the following methods: push(), pop(), peek(). Create a class called Queue with the following methods: enqueue, dequeue, peek.
+
+## Approach & Efficiency
+* Stack: I only keep track of the top of the stack. 
+* * push(entry): Everytime push is called, a new node is created with the input value. I point the new entry at the top of the stack then change the top reference to the new entry. This is O(1) for time and O(1) for space.
+* * pop(): Everytime pop is called, I create a reference to the top of the stack in a new varibale. Then I change the tops pointer to the next item in the stack and return the variable holding the reference. This is O(1) in time and O(1) in space.
+* * peek(): Everytime peek is called, I return the value of the top. This is O(1) in time and O(1) in space.
+
+* Queue: I keep track of the front and rear of the queue.
+* * enqueue(entry): Everytime enqueue is called, a new node is created with the input value. I point the rear node at the new entry and set the new entry as the rear reference. This is O(1) in time and O(1) in space.
+* * dequeue(): Everytime dequeue is called, I set a reference to the front of the queue in a new variable. Then I change the pointer of the front to the next item in the queue and reutnr the variable holding the reference to the front. This is O(1) in time and O(1) in space.
+* * peek(): Everytime peek is called, I return the value of the front. This is O(1) in time and O(1) in space.
+
+## API
+* Stack:
+* * push(entry): Input: 5 --> Output: no output;
+* * pop(): Input: no input --> Output: value of the popped off node;
+* * peek(): Input: no input --> Output: value of the node at the top of stack;
+
+* Queue:
+* * enqueue(entry): Input: 3 --> Output: no output;
+* * dequeue(): Input: no input --> Output: value off the dequeued node;
+* * peek(): Input: no input --> Output: value of the node at the front of the queue;
+
+

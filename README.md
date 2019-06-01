@@ -139,3 +139,23 @@ dequeue: In order to dequeue in reverse flow of a stack. I transfered the stack 
 ## Solution
 ![whiteboard queues with stacks](/assets/queueswithstacks.jpg)
 
+# Animal Shelter with Queues
+Create a class called AnimalShelter that only takes in dogs and cats. The shelter operates on the first in first out order. <br>
+
+## Challenge
+* enqueue(animal): adds animal to the shelter. animal can be either a dog or a cat object.
+* dequeue(pref): returns either a dog or a cat. If pref is not "dog" or "cat" then return null.
+
+## Approach & Efficiency
+I used two queues to keep dogs (dogQ) and cats (catQ) separate.
+
+enqueue: Check if the value passed in is 'cat', or 'dog'. Use built in enqueue method to add the animal to the correct queue. This is O(1) in time and space.
+
+dequeue: Check if the value passed in is 'cat' or 'dog'. Use built in dequeue method to remove the first animal from the correct queue. This is O(1) in time and space.
+
+Add in some conditionals for edge cases:
+* Do not dequeue if queue is empty
+* Convert all user input to lower case
+
+## Solution
+![whiteboard fifo animal shelter](/assets/fifo-animal-shelter.jpg)

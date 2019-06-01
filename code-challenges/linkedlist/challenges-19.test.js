@@ -39,8 +39,8 @@ class Node{
         return 'exception';
       }
     }
-    if(current.value === value){
-      current = {
+    if(current.next.value === value){
+      current.next = {
         value: newValue,
         next: current.next
       };
@@ -70,8 +70,9 @@ class Node{
 let stockFamily = new Node;
 stockFamily.append('melissa');
 stockFamily.append('wallace');
+stockFamily.append('kiwi');
 stockFamily.insertAfter('melissa','kevin');
-stockFamily.insertBefore('kevin', 'testing');
+stockFamily.insertBefore('wallace', 'testing');
 
 
 console.log(stockFamily);

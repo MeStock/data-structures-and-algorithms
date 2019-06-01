@@ -125,3 +125,17 @@ Create a class called with the following methods: push(), pop(), peek(). Create 
 * * peek(): Input: no input --> Output: value of the node at the front of the queue;
 
 
+# Queues with Stacks
+Create a class called PseudoQueue that uses 2 stack objects internally to enqueue and dequeue with first-in0first-out order. Stacks can perform standard peek, pop, push methods. <br>
+
+## Challenge
+Convert stacks normal flow from last-in-first-out to queue normal flow of first-in-first-out.
+
+## Approach & Efficiency
+enqueue: Queues and Stacks behave in the same way when adding to the list. Pushing to the end of the queue is equivalent to adding to the top of a Stack. This is O(1) in time and space.
+
+dequeue: In order to dequeue in reverse flow of a stack. I transfered the stack with values into a new stack to reverse the order, unitl all values have been tranfered. Once that is compelete, I poped off the top of the new stack which is now the first value that went into the first stack. This is O(1) in space and O(n) in time, where n is the length of the stack.
+
+## Solution
+![whiteboard queues with stacks](/assets/queueswithstacks.jpg)
+

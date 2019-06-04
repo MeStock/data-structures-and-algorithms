@@ -182,3 +182,21 @@ Binary Search Trees:
 add(value): traverses through the tree - going right if the new value is less than the current nodes value or going left if the new value is greater than the current nodes value - until a leaf is found. Then inserts the new value either to the right or left of the leaf node depending on its value.
 
 contains(value): traverses through the tree and returns true if the tree contains the value. returns false if tree is empty, an invalid value is given, or the value was not found.
+
+# Fizzbuzz Tree
+Create a function called FizzbuzzTree that takes in the root of a tree. It traverses the tree and replaces values divisible by 3 with the string 'fizz', values divisible by 5 are replaced with 'buzz', and values divisible by 3 and 5 are replaced with 'fizzbuzz'.
+
+## Challenge
+* traverse tree, checking the type of the value within each node. If the value is a number - check the conditions listed above. Modify tree in place.
+
+## Approach & Efficiency
+To modify the tree in place, I used recursion to traverse the tree.
+Time: O(n) - where n is the number of nodes in the tree
+Space: O(1) - Modify the tree in place - however, O(n) where n is the call stack since this function uses recursion.
+
+Add in some conditionals for edge cases:
+* Do not traverse is the tree is empty
+* Do not check if values are divisible if they are not numbers
+
+## Solution
+![whiteboard fizzbuzz tree](/assets/fizzbuzzTree.jpeg)

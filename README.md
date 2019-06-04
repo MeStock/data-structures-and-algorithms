@@ -200,3 +200,21 @@ Add in some conditionals for edge cases:
 
 ## Solution
 ![whiteboard fizzbuzz tree](/assets/fizzbuzzTree.jpeg)
+
+# Find the depth of a value within a Binary Tree
+Create a function called depth of value that takes in the root of a tree and a value. It will search the tree for a value and if found return the depth at which it was found.
+
+## Challenge
+* traverse tree, checking values of each node and tracking the depth. Using recursion to keep track of the depth going down the tree and passing the depth back through the call stack when the value is found.
+
+## Approach & Efficiency
+Time: O(n) - where n is the number of nodes within the tree.
+Space: O(H) - where H is the height of the tree. 
+
+Add in some conditionals for edge cases:
+* Do not traverse is the tree is empty
+* Return null if no value is found
+
+## Solution
+![whiteboard fizzbuzz tree](/assets/depthOfValue.jpg)
+

@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f83a9f39-5b27-4a9b-a709-33adf39e3501" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/depthOfValue.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -21,8 +19,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="220">
-                <caret line="206" column="12" lean-forward="true" selection-start-line="206" selection-start-column="12" selection-end-line="206" selection-end-column="12" />
+              <first_editor relative-caret-position="409">
+                <caret line="215" column="34" lean-forward="true" selection-start-line="215" selection-start-column="34" selection-end-line="215" selection-end-column="34" />
               </first_editor>
               <second_editor />
             </state>
@@ -128,12 +126,12 @@
       <workItem from="1559631868163" duration="251000" />
       <workItem from="1559632245275" duration="353000" />
       <workItem from="1559686336097" duration="128000" />
-      <workItem from="1559686479167" duration="2356000" />
+      <workItem from="1559686479167" duration="2407000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7224000" />
+    <option name="totallyTimeSpent" value="7275000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -228,8 +226,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="220">
-            <caret line="206" column="12" lean-forward="true" selection-start-line="206" selection-start-column="12" selection-end-line="206" selection-end-column="12" />
+          <first_editor relative-caret-position="409">
+            <caret line="215" column="34" lean-forward="true" selection-start-line="215" selection-start-column="34" selection-end-line="215" selection-end-column="34" />
           </first_editor>
           <second_editor />
         </state>

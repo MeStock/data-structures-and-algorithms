@@ -216,5 +216,5 @@ Add in some conditionals for edge cases:
 * Return null if no value is found
 
 ## Solution
-![whiteboard fizzbuzz tree](/assets/depthOfValue.jpg)
+![whiteboard depth of value](/assets/depthOfValue.jpg)
 

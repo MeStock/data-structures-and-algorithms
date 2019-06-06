@@ -218,3 +218,21 @@ Add in some conditionals for edge cases:
 ## Solution
 ![whiteboard depth of value](/assets/depthOfValue.jpg)
 
+# Find the max value of a tree
+Create a function that takes in a tree as a parameter and returns its max value using breadth first traversal.
+## Challenge
+* traverse the tree using breadth first traversal methods. Check each node value compared to the current max, replace is necessary. Return the value at the end. 
+
+## Approach & Efficiency
+Time: O(n) - where n is the number of nodes within the tree.
+Space: O(W) - where W is the width of the tree. 
+
+Add in some conditionals for edge cases:
+* Do not traverse is the tree is empty
+* check type of the value being checked
+* make sure negative numbers are taken into consideration
+
+## Solution
+![whiteboard max value of tree](/assets/maxValue.jpeg)
+
+

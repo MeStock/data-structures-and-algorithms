@@ -28,6 +28,7 @@ class Queue{
   }
 
   peek(){
+    if(this.front === null) return null;
     return this.front.value;
   }
 }

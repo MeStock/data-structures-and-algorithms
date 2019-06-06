@@ -1,20 +1,22 @@
 'use strict';
 
+const Queue = require('../stacksandqueues/queue.js');
+
 function findMaxValue(node){
   if(!node) return null;
-  let Q = [];
+  let Q = new Queue();
   let maxValue = node.value;
-  Q.push(node);
-  while(Q.length > 0){
-    if(Q[0].value > maxValue){
-      maxValue = Q[0].value;
-    }
-    node = Q.shift();
+  Q.enqueue(node);
+  while(Q.peek()){
+    node = Q.dequeue();
     if(node.left){
-      Q.push(node.left);
+      Q.enqueue(node.left);
     }
     if(node.right){
-      Q.push(node.right);
+      Q.enqueue(node.right);
+    }
+    if(node.value > maxValue){
+      maxValue = node.value;
     }
   }
   return maxValue;

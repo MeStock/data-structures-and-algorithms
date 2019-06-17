@@ -1,5 +1,7 @@
 # data-structures-and-algorithms
 
+* [travis](https://www.travis-ci.com/)
+
 <h2>Overview</h2>
     <p>This repo is a place to organize completed code challenges. Within the code challenges folder, you can find examples of different data structure and algorithm problems with their optimzed solutions.</p>
 
@@ -218,3 +220,28 @@ Add in some conditionals for edge cases:
 ## Solution
 ![whiteboard depth of value](/assets/depthOfValue.jpg)
 
+# Reverse an Array
+The reverse array function will take in an array as a parameter and return the elements of the array in reverser order.
+
+## Challenge
+Modify array in place
+
+## Approach & Efficiency
+I knew that I needed some sort of looping mechanism, so I started by visualizing the input and output of the array. <br><br>
+     I: [1,2,3,4,5] <br>
+     O: [5,4,3,2,1] <br><br>
+Keeping track of the front index and back index  and making swaps was the optimal solution. 
+
+LOOP 1:
+[5,2,3,4,1] 
+<br><br>
+LOOP 2:
+[5,4,3,2,1]
+<br><br>
+LOOP 3: reached the middle of the array so return the current state of the array.
+
+The time complexity for this is O(n) where n is half the length of the list and space complexity is O(1) because we are modifying in place.
+You can also solve this problem using built in array methods (reverse, push, pop) or recursively but the space/time complexities are not as efficient.
+
+## Solution
+![whiteboard array reverse](/assets/more-array-reverse.jpg)

@@ -1,6 +1,6 @@
 # data-structures-and-algorithms
 
-* [travis](https://www.travis-ci.com/)
+* [travis](https://www.travis-ci.com/MeStock/data-structures-and-algorithms)
 
 <h2>Overview</h2>
     <p>This repo is a place to organize completed code challenges. Within the code challenges folder, you can find examples of different data structure and algorithm problems with their optimzed solutions.</p>

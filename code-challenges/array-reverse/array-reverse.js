@@ -8,7 +8,6 @@ function reverseArray(arr){
   return result;
 }
 
-console.log(reverseArray([1,2,3,4,5]));
 
 // STRETCH GOAL
 // Once you’ve achieved a working solution, implement the same feature with a different methodology. (Hint: what different techniques do you have when working with arrays? Recursion, loops, indexes, modifying the array input directly…)
@@ -23,4 +22,5 @@ function stretchGoal(arr){
   return result;
 }
 
-console.log(stretchGoal([1,2,3,4,5]));
+module.exports = {reverseArray, stretchGoal};
+

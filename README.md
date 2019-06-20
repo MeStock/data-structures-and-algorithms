@@ -1,5 +1,7 @@
 # data-structures-and-algorithms
 
+* [travis](https://www.travis-ci.com/MeStock/data-structures-and-algorithms)
+
 <h2>Overview</h2>
     <p>This repo is a place to organize completed code challenges. Within the code challenges folder, you can find examples of different data structure and algorithm problems with their optimzed solutions.</p>
 
@@ -159,3 +161,104 @@ Add in some conditionals for edge cases:
 
 ## Solution
 ![whiteboard fifo animal shelter](/assets/fifo-animal-shelter.jpg)
+
+# Trees
+Trees are a type of data structure made up of `nodes`. A binary tree start with a root node that has a pointer for a left child and right child node. Each child node also has a set of pointers toward a left child and right child node. A binary search tree is a tree that adds nodes to the left of the parent node its value is less than the parent - or to the right of the parent node if its value is greater than the parent. 
+
+## Challenge
+Create a Binary Tree class with preorder, inorder, and post order methods.
+Create a Binary Search Tree class with add and contain methods.
+
+## Approach & Efficiency
+Binary Tree: Traversing the tree will have a O(n) in time, where n is the number of nodes in the tree and O(1) in space. Similarly, inserting into the tree will have O(n) in time.
+
+BinarySearch Tree: Travering the tree will have an O(n) in time, where n is the number of nodes in the tree and O(1) in space. However inserting into the tree will have O(h) in time, where h is the height of the tree.
+
+## API
+Binary Trees:
+preOrder(): returns an array of values stored in the tree in the order: root, left right.
+inOrder(): returns an array of values stored in the tree in the order: left, root, right.
+postOrder(): returns an array of values stored in the tree in the order: left, right, root.
+
+Binary Search Trees:
+add(value): traverses through the tree - going right if the new value is less than the current nodes value or going left if the new value is greater than the current nodes value - until a leaf is found. Then inserts the new value either to the right or left of the leaf node depending on its value.
+
+contains(value): traverses through the tree and returns true if the tree contains the value. returns false if tree is empty, an invalid value is given, or the value was not found.
+
+# Fizzbuzz Tree
+Create a function called FizzbuzzTree that takes in the root of a tree. It traverses the tree and replaces values divisible by 3 with the string 'fizz', values divisible by 5 are replaced with 'buzz', and values divisible by 3 and 5 are replaced with 'fizzbuzz'.
+
+## Challenge
+* traverse tree, checking the type of the value within each node. If the value is a number - check the conditions listed above. Modify tree in place.
+
+## Approach & Efficiency
+To modify the tree in place, I used recursion to traverse the tree.
+Time: O(n) - where n is the number of nodes in the tree
+Space: O(1) - Modify the tree in place - however, O(n) where n is the call stack since this function uses recursion.
+
+Add in some conditionals for edge cases:
+* Do not traverse is the tree is empty
+* Do not check if values are divisible if they are not numbers
+
+## Solution
+![whiteboard fizzbuzz tree](/assets/fizzbuzzTree.jpeg)
+
+# Find the depth of a value within a Binary Tree
+Create a function called depth of value that takes in the root of a tree and a value. It will search the tree for a value and if found return the depth at which it was found.
+
+## Challenge
+* traverse tree, checking values of each node and tracking the depth. Using recursion to keep track of the depth going down the tree and passing the depth back through the call stack when the value is found.
+
+## Approach & Efficiency
+Time: O(n) - where n is the number of nodes within the tree.
+Space: O(H) - where H is the height of the tree. 
+
+Add in some conditionals for edge cases:
+* Do not traverse is the tree is empty
+* Return null if no value is found
+
+## Solution
+![whiteboard depth of value](/assets/depthOfValue.jpg)
+
+# Reverse an Array
+The reverse array function will take in an array as a parameter and return the elements of the array in reverser order.
+
+## Challenge
+Modify array in place
+
+## Approach & Efficiency
+I knew that I needed some sort of looping mechanism, so I started by visualizing the input and output of the array. <br><br>
+     I: [1,2,3,4,5] <br>
+     O: [5,4,3,2,1] <br><br>
+Keeping track of the front index and back index  and making swaps was the optimal solution. 
+
+LOOP 1:
+[5,2,3,4,1] 
+<br><br>
+LOOP 2:
+[5,4,3,2,1]
+<br><br>
+LOOP 3: reached the middle of the array so return the current state of the array.
+
+The time complexity for this is O(n) where n is half the length of the list and space complexity is O(1) because we are modifying in place.
+You can also solve this problem using built in array methods (reverse, push, pop) or recursively but the space/time complexities are not as efficient.
+
+## Solution
+![whiteboard array reverse](/assets/more-array-reverse.jpg)
+
+# Find Sum of Integers
+Given an array and key, find the first pair of values within the array that add up and equal the key.
+
+## Challenge
+Modify array in place
+
+## Approach & Efficiency
+I used a hashmap to implement this search. Add all the values to a hashmap. Iterate through array, calculate the difference between each index of the array and the key. Use the hashmap to check if the difference exists within the map.
+
+Time complexity: O(n) where n is the length of the array
+Space complexity: O(n) where n is the length of the array
+
+The brure force method for this problem is to check every single pair within the array using nesed for loops. This would result in time complexity of O(n^2) and space complexity of O(1). Depending on individual cases, you would consider this case to save space.
+
+## Solution
+![whiteboard array reverse](/assets/findSumOfInts.jpg)

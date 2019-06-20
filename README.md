@@ -159,3 +159,26 @@ Add in some conditionals for edge cases:
 
 ## Solution
 ![whiteboard fifo animal shelter](/assets/fifo-animal-shelter.jpg)
+
+# Trees
+Trees are a type of data structure made up of `nodes`. A binary tree start with a root node that has a pointer for a left child and right child node. Each child node also has a set of pointers toward a left child and right child node. A binary search tree is a tree that adds nodes to the left of the parent node its value is less than the parent - or to the right of the parent node if its value is greater than the parent. 
+
+## Challenge
+Create a Binary Tree class with preorder, inorder, and post order methods.
+Create a Binary Search Tree class with add and contain methods.
+
+## Approach & Efficiency
+Binary Tree: Traversing the tree will have a O(n) in time, where n is the number of nodes in the tree and O(1) in space. Similarly, inserting into the tree will have O(n) in time.
+
+BinarySearch Tree: Travering the tree will have an O(n) in time, where n is the number of nodes in the tree and O(1) in space. However inserting into the tree will have O(h) in time, where h is the height of the tree.
+
+## API
+Binary Trees:
+preOrder(): returns an array of values stored in the tree in the order: root, left right.
+inOrder(): returns an array of values stored in the tree in the order: left, root, right.
+postOrder(): returns an array of values stored in the tree in the order: left, right, root.
+
+Binary Search Trees:
+add(value): traverses through the tree - going right if the new value is less than the current nodes value or going left if the new value is greater than the current nodes value - until a leaf is found. Then inserts the new value either to the right or left of the leaf node depending on its value.
+
+contains(value): traverses through the tree and returns true if the tree contains the value. returns false if tree is empty, an invalid value is given, or the value was not found.

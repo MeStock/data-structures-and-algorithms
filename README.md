@@ -245,3 +245,20 @@ You can also solve this problem using built in array methods (reverse, push, pop
 
 ## Solution
 ![whiteboard array reverse](/assets/more-array-reverse.jpg)
+
+# Find Sum of Integers
+Given an array and key, find the first pair of values within the array that add up and equal the key.
+
+## Challenge
+Modify array in place
+
+## Approach & Efficiency
+I used a hashmap to implement this search. Add all the values to a hashmap. Iterate through array, calculate the difference between each index of the array and the key. Use the hashmap to check if the difference exists within the map.
+
+Time complexity: O(n) where n is the length of the array
+Space complexity: O(n) where n is the length of the array
+
+The brure force method for this problem is to check every single pair within the array using nesed for loops. This would result in time complexity of O(n^2) and space complexity of O(1). Depending on individual cases, you would consider this case to save space.
+
+## Solution
+![whiteboard array reverse](/assets/findSumOfInts.jpg)

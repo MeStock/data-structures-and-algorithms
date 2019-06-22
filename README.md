@@ -264,6 +264,7 @@ The brure force method for this problem is to check every single pair within the
 ![whiteboard array reverse](/assets/findSumOfInts.jpg)
 
 # Hashtables
+We mob programmed this challenge. Group members: Melissa Stock, Bonnie Wang, Jagdeep Singh, Rebecca Peterson, Joe Jemmely
 Implement a hashtable with the following built in methods : add(key, value), get(key), contains(key), and hash(key);
 
 ## Challenge

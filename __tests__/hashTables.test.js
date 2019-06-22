@@ -18,7 +18,6 @@ const HashTable = require('../code-challenges/hashtables/hashtables.js');
 describe('Hash Tables', () => {
   it('should add a key/value', () => {
     const test = new HashTable();
-    console.log(test.add('key', 'value'));
     expect(test.add('key', 'value')).toEqual('value');
   });
 

@@ -262,3 +262,18 @@ The brure force method for this problem is to check every single pair within the
 
 ## Solution
 ![whiteboard array reverse](/assets/findSumOfInts.jpg)
+
+# Hashtables
+Implement a hashtable with the following built in methods : add(key, value), get(key), contains(key), and hash(key);
+
+## Challenge
+* add(key, value) returns the value that was just added
+* get(key) returns the value associated with the key
+* contains(key) returns true/false if the hashtable contains a value with the associated key
+* hash(key) returns an index associated with the unique hashed key
+
+## Approach & Efficiency
+* add(key, value) Time: O(L) where L is the length of the string Space: O(1) *if you ignore the hashing Time: O(1)
+* get(key) Time: O(L) where L is the length of the string Space: O(1)  *if you ignore the hashing Time: O(1)
+* contains(key) Time: O(L) where L is the length of the string Space: O(1) *if you ignore the hashing Time: O(1)
+* hash(key) Time: O(L) where L is the length of the string Space: O(1)

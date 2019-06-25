@@ -278,3 +278,21 @@ Implement a hashtable with the following built in methods : add(key, value), get
 * get(key) Time: O(L) where L is the length of the string Space: O(1)  *if you ignore the hashing Time: O(1)
 * contains(key) Time: O(L) where L is the length of the string Space: O(1) *if you ignore the hashing Time: O(1)
 * hash(key) Time: O(L) where L is the length of the string Space: O(1)
+
+# Find Tree Path
+Given a start and an end value, traverse a tree and return a linked list representation of the path between the start and end value.
+
+## Challenge
+* Traverse the tree
+* Keep track of values
+* Create a linked list of values for the path
+* Add/remove values that belong in path
+
+## Approach & Efficiency
+Broke the problem into several smaller problems listed above to identify an approach. I used recursion to traverse the tree and modified the linked list in place to keep track of values within the given path.
+
+Time complexity: O(H) where H is the height of the tree
+Space complexity: O(n) where n is the length of the linked list
+
+## Solution
+![whiteboard array reverse](/assets/findTreePath.jpg)

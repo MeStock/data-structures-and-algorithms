@@ -296,3 +296,22 @@ Space complexity: O(n) where n is the length of the linked list
 
 ## Solution
 ![whiteboard array reverse](/assets/findTreePath.jpg)
+
+# Find Intersections Between Two Trees
+Given two binary trees, find all the intersections between the two. Meaning, return all the common values that they share between them.
+
+## Challenge
+* Traverse tree 1
+  * Add all its values into a set 
+  * Return the set
+* Traverse tree 2
+  * At eact node - if the value exists in the previous set
+    * add that value to new set
+  * Return new set
+* Return the new set
+
+## Approach & Efficiency
+Broke the problem into 3 functions listed above. Time complexity O(n) where n is the sum of nodes between the two trees. Space complexity O(m) where m is the the larger of two - either the height of the second tree or the number of nodes in the first tree.
+
+## Solution
+![whiteboard array reverse](/assets/findTreeIntersection.jpg)

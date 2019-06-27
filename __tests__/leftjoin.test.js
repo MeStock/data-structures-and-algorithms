@@ -1,6 +1,6 @@
 'use strict';
 
-const leftJoin = require('../code-challenges/leftJoin/leftjoin.js');
+const leftJoin = require('../code-challenges/leftjoin/leftjoin.js');
 
 describe('left join', () => {
   it('should join two hashmaps together', () => {

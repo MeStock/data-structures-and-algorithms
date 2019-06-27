@@ -315,3 +315,33 @@ Broke the problem into 3 functions listed above. Time complexity O(n) where n is
 
 ## Solution
 ![whiteboard array reverse](/assets/findTreeIntersection.jpg)
+
+# Left Join
+Given two hashmaps, join the values of matching keys into the left map. If the key does not exist in the right map, add null to the join. Return a new data structure of the joined key value pairs.
+
+
+Input:
+
+* Map1 = {k1:v1, k2:v2, k3:v3}
+  
+* Map2 = {k1:val1, k2:val2, k4:val4}
+
+Output:
+
+* {k1:[v1,val1], k2:[v2,val2], k3:[v3,null]}
+
+## Challenge
+* Iterate through Map1
+  * Add all its key value pairs to a new object where the keys remain the same but the values are added to an array
+  * Check if value exists in Map2
+    * if yes - get that value and add it to the end of the array
+    * if no - add null to the end of the array
+  * return the new object
+
+## Approach & Efficiency
+Time complexity is O(n) where n is number of keys in Map1
+Space complexity is O(n) where n is the sum of the values in Map1 and Map2
+
+
+## Solution
+![whiteboard array reverse](/assets/leftjoin.jpg)

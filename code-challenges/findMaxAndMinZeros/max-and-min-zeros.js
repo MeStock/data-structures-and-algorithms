@@ -19,6 +19,7 @@ const _findPartition = array => {
 
 const findMaxAndMinZeros = (array) => {
   if(!array) return null;
+  if(array.length < 1) return null;
   const result = {
     max: 0,
     maxIdx: 0,

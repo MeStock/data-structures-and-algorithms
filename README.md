@@ -345,3 +345,36 @@ Space complexity is O(n) where n is the sum of the values in Map1 and Map2
 
 ## Solution
 ![whiteboard array reverse](/assets/leftjoin.jpg)
+
+# Left Join
+Given a 2D array of sorted binary values, find the row that has the most and least number of zeros.
+
+
+Input:
+[
+  [0,0,0,1],
+  [0,0,0,1],
+  [0,0,1,1],
+  [0,0,0,1],
+  [0,0,0,0],
+  [0,0,0,1],
+];
+
+Output:
+
+* {max: 4, min: 2}
+
+## Challenge
+* Iterate through all the rows
+  * For each row - find the particition point (where 0 changes to 1) using a binary search
+  * Compare partition point index to the current max & min
+  * The row with the lowest parition point index has the least zeros
+  * THe row with the largest partition point index has the most zeros
+
+## Approach & Efficiency
+Time complexity is O(mlog(n)) m is the number of rows and n is the number of indexies
+Space complexity is O(1) because we are only storing the max & min regarldless of the shape of the input
+
+
+## Solution
+![whiteboard array reverse](/assets/max-and-min-zeros.jpg)

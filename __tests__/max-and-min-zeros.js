@@ -20,5 +20,6 @@ describe('find the rows with the most and least number of zeros given a 2d array
 
   it('should return null if there is an invalid input', () => {
     expect(findMaxAndMinZeros()).toBeNull();
+    expect(findMaxAndMinZeros([])).toBeNull();
   });
 });

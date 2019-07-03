@@ -346,7 +346,7 @@ Space complexity is O(n) where n is the sum of the values in Map1 and Map2
 ## Solution
 ![whiteboard array reverse](/assets/leftjoin.jpg)
 
-# Left Join
+# Find Max and Min Zeros
 Given a 2D array of sorted binary values, find the row that has the most and least number of zeros.
 
 
@@ -378,3 +378,32 @@ Space complexity is O(1) because we are only storing the max & min regarldless o
 
 ## Solution
 ![whiteboard array reverse](/assets/max-and-min-zeros.jpg)
+
+# Flags & Quicksort
+Give an array with values: blue, white and shield - sort the array so that it represents the el-salvadorian flag. The white and blue values will always be even and there is only one shield.
+
+
+Input:<br>
+['white', 'blue', 'blue', 'white', 'white', 'white', 'shield', 'blue', 'blue'];
+
+Output:<br>
+['blue', 'blue', 'white','white', 'shield', 'white', 'white', 'blue', 'blue'];
+
+
+
+## Challenge
+* Set the pivot to the last value
+  * iterate through array
+  * check if value is blue, white or shield (using switch)
+  * mark firstblue/white depending on each value
+  * if shield is found move it to the center
+  * track how many blues/white are on each side
+  * swap values based on firstblue/white and lastblue/white locations
+
+## Approach & Efficiency
+Time complexity is O(n) n is the number of values within the array
+Space complexity is O(1) because we modifying in place
+
+
+## Solution
+![whiteboard array reverse](/assets/flag-quicksort.jpeg)

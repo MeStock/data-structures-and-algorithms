@@ -12,6 +12,9 @@
   "license": "MIT",
   "dependencies": {
     "eslint": "^5.16.0",
-    "jest": "^24.1.0"
+    "jest": "^24.1.0",
+    "js-priority-queue": "^0.1.5",
+    "queue-fifo": "^0.2.6",
+    "stack-lifo": "^0.1.6"
   }
 }

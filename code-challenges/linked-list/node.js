@@ -1,6 +1,5 @@
 'use strict';
 
-
 class Node {
   constructor(){
     this.value = null;

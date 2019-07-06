@@ -50,13 +50,13 @@ graph.addEdge(vertex20, vertex25, 10);
 graph.addEdge(vertex15, vertex25, 10000);
 
 let paths = bfs(graph, vertex5, vertex25);
-console.log(paths);
+// console.log(paths);
 
 paths = dfs(graph, vertex5, vertex25);
-console.log(paths);
-
-// paths = dijkstra(graph,vertex5, vertex25);
 // console.log(paths);
+
+paths = dijkstra(graph,vertex5, vertex25);
+console.log(paths);
 
 
 // HW 1

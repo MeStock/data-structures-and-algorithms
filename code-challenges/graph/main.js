@@ -52,8 +52,8 @@ graph.addEdge(vertex15, vertex25, 10000);
 let paths = bfs(graph, vertex5, vertex25);
 console.log(paths);
 
-// paths = dfs(graph, vertex5, vertex25);
-// console.log(paths);
+paths = dfs(graph, vertex5, vertex25);
+console.log(paths);
 
 // paths = dijkstra(graph,vertex5, vertex25);
 // console.log(paths);

@@ -2,7 +2,7 @@
 const Queue = require('queue-fifo');
 
 module.exports = (graph, startVertex, goalVertex) => {
-  const queue = new Queue(); // Vinicio - HW, make this a real queue - https://www.npmjs.com/package/queue-fifo
+  const queue = new Queue();
   const visitedVertices = new Set();
 
   const paths = new Map();
@@ -12,9 +12,6 @@ module.exports = (graph, startVertex, goalVertex) => {
 
 
   while(queue.size() > 0) {
-    // dequeue
-    // check for goal
-    // loop over all the neighobrs
     const currentVertex = queue.dequeue();
 
     if(currentVertex === goalVertex) {

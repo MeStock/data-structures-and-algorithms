@@ -1,0 +1,34 @@
+'use strict';
+
+module.exports = (graph, startVertex, goalVertex) => {
+  const queue = []; // Vinicio - HW, make this a real queue - https://www.npmjs.com/package/queue-fifo
+  const visitedVertices = new Set();
+
+  const paths = new Map();
+
+  queue.unshift(startVertex);
+  visitedVertices.add(startVertex);
+
+
+  while(queue.length > 0) {
+    // dequeue
+    // check for goal
+    // loop over all the neighobrs
+    const currentVertex = queue.pop();
+
+    if(currentVertex === goalVertex) {
+      return paths;
+    }
+    
+    let neighbor = graph.getNeighbors(currentVertex);
+    while(neighbor){
+      if(!visitedVertices.has(neighbor.value.vertex)){
+        visitedVertices.add(neighbor.value.vertex);
+      }
+      paths.set(neighbor.value.vertex, currentVertex);
+      queue.unshift(neighbor.value.vertex);
+      neighbor = neighbor.next;
+    }
+  }
+  return null;
+};

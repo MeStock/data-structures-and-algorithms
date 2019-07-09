@@ -440,3 +440,36 @@ Space complexity is O(n) where n is the number of vertecies in the graph
 
 ## Solution
 ![whiteboard array reverse](/assets/dfs-graph.jpeg)
+
+# Depth First Traveral of a Graph
+Given an 8x8 2d array, determine if two chess pieces are within range of the king. Pieces are placed randomly within the 8x8 board.
+
+Input:<br>
+k = King
+b = bishop
+r = rook
+[
+  [0,0,0,0,0,0,0,0],
+  [0,0,r,0,0,0,0,0],
+  [0,0,0,0,0,0,0,0],
+  [0,0,0,0,k,0,0,0],
+  [0,0,0,0,0,0,0,0],
+  [0,0,0,0,0,0,0,0],
+  [0,b,0,0,0,0,0,0],
+  [0,0,0,0,0,0,0,0]
+]
+
+Output<br>
+True
+
+## Challenge
+* Iterate over the arrays to locate all the pieces
+* calculate if the found pieces can move to the location of the king
+* return true or false
+
+## Approach & Efficiency
+Time Complexity: O(1) because we will always have to traverse over the entire board to locate the pieces
+Space Complexity: O(1) because we will always have to store the same amount of space for the location of each piece.
+
+## Solution
+![whiteboard array reverse](/assets/chess.jpg)

@@ -407,3 +407,36 @@ Space complexity is O(1) because we modifying in place
 
 ## Solution
 ![whiteboard array reverse](/assets/flag-quicksort.jpeg)
+
+# Depth First Traveral of a Graph
+Given an adjacency list of a graph, print out the values in preorder.
+
+Input:<br>
+{
+  A: [B,D],
+  B: [C,D,A],
+  C: [G,B],
+  G: [C],
+  D: [E,H,F,A,B],
+  E: [D],
+  H: [F,D],
+  F: [D,H]
+}
+
+Output<br>
+[A,B,C,G,D,E,H,F]
+
+## Challenge
+* Track the visited verticies
+* Starting at the root:
+  * Check the first neighboring vertex
+  * Add its value to the tracked verticies
+  * Check its neighboring vertex & repeat until there is a dead end
+
+## Approach & Efficiency
+Traversing the tree recursively:
+Time complexity is O(n) n is the number of vertecies in the graph
+Space complexity is O(n) where n is the number of vertecies in the graph
+
+## Solution
+![whiteboard array reverse](/assets/dfs-graph.jpeg)

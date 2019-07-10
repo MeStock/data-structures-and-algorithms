@@ -473,3 +473,32 @@ Space Complexity: O(1) because we will always have to store the same amount of s
 
 ## Solution
 ![whiteboard array reverse](/assets/chess.jpg)
+
+# Determin if a graph has an island
+Given a graph and its adjaceny list, determine if it contains an island.
+
+Input:<br>
+_adjacencyList = {
+  A: [E,F,B],
+  B: [F,A,C],
+  C: [A,B],
+  E: [A],
+  F: [B],
+  X: []
+}
+
+Output<br>
+True
+
+## Challenge
+* Traverse the graph
+* Add verticies and its neighbors to a set (to track values that we have checked)
+* Compare the adjancency list to the set
+* If a value exists in the adjacency list and not in the set - it is an island
+
+## Approach & Efficiency
+Time Complexity: O(n) because we have to traverse the entire graph - where n is the number of verticies
+Space Complexity: O(n) because we will create a set of n elements - where n is the number of verticies visited
+
+## Solution
+![whiteboard array reverse](/assets/graph-island.jpg)

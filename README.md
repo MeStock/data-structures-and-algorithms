@@ -502,3 +502,30 @@ Space Complexity: O(n) because we will create a set of n elements - where n is t
 
 ## Solution
 ![whiteboard array reverse](/assets/graph-island.jpg)
+
+# Infinite Stream
+Given n 'infinite' stream and N, find the N most common characters within that stream. Write a function that reduces the potential for the program to crash if the stream is infinite.
+
+Input:<br>
+'abbabcaaaaaa',
+N = 3;
+
+Output<br>
+[a,b,c];
+
+
+## Challenge
+* break the stream into managable lengths
+* evaluate each portion of the stream individually
+* iterate over each character and track unique characters in a hash map with a counter
+* increment counter as the characters appear within the stream
+* if the counter ever increases beyond a preset upper limit - add that value to a result array
+* if the result array ever gets larger than N - return the array
+* if the result array never gets larger than N - return the characters with the largest counter value in the hash map
+
+## Approach & Efficiency
+Time Complexity: O(n) where n is the number of characters - because we have to iterate over the length of the stream
+Space Complexity: O(1) because we break the stream into managable lengths which is constant.
+
+## Solution
+![whiteboard array reverse](/assets/infinite-stream.jpg)
